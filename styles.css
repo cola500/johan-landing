@@ -14,28 +14,34 @@ body {
     background: #1c1815;
     color: #ede4d3;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
+@media (max-width: 700px) {
+    body {
+        font-size: 19px;
+    }
+}
+
 main {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 4rem 1.5rem 2rem;
+    padding: 4.5rem 1.5rem 2rem;
 }
 
 section {
-    margin-bottom: 6.5rem;
+    margin-bottom: 8rem;
 }
 
 @media (max-width: 700px) {
     main {
-        padding: 2.25rem 1.25rem 2rem;
+        padding: 2.5rem 1.25rem 2rem;
     }
     section {
-        margin-bottom: 5rem;
+        margin-bottom: 6rem;
     }
 }
 
@@ -43,26 +49,31 @@ h1,
 h2,
 h3 {
     font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
-    font-weight: 500;
     letter-spacing: -0.01em;
-    line-height: 1.2;
     color: #f6efde;
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2rem, 6vw, 2.4rem);
+    font-weight: 600;
+    line-height: 1.2;
     margin: 0 0 1.5rem;
+    max-width: 18ch;
 }
 
 h2 {
-    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-size: clamp(1.5rem, 4.5vw, 1.85rem);
+    font-weight: 600;
+    line-height: 1.2;
     margin: 0 0 1.25rem;
 }
 
 h3 {
-    font-size: 1.15rem;
-    margin: 0 0 0.5rem;
-    color: #f0e8d3;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 0.85rem;
+    color: #f6efde;
 }
 
 p {
@@ -74,56 +85,61 @@ p:last-child {
 }
 
 .lead {
-    font-size: 1.125rem;
-    color: #c9bfac;
-    max-width: 62ch;
+    font-size: 1.15rem;
+    color: #d4c8b3;
+    max-width: 36ch;
     margin: 0 0 2rem;
+    line-height: 1.55;
 }
 
 .section-intro {
-    color: #a89c8a;
-    font-size: 0.98rem;
+    color: #c9bfac;
+    font-size: 1rem;
     margin: -0.25rem 0 1.75rem;
-    max-width: 62ch;
+    max-width: 38ch;
+    line-height: 1.5;
 }
 
 /* Hero */
 .hero {
     padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .hero__hook {
-    font-size: clamp(1.15rem, 3.4vw, 1.4rem);
-    line-height: 1.4;
-    color: #f0e8d3;
-    margin: 0 0 0.75rem;
-    max-width: 36ch;
+    font-size: clamp(1.25rem, 4.2vw, 1.45rem);
+    line-height: 1.35;
+    color: #f6efde;
+    margin: 0 0 1rem;
+    max-width: 26ch;
     font-weight: 500;
 }
 
 .hero__cue {
-    font-size: 0.95rem;
-    color: #a89c8a;
-    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: #c9bfac;
+    margin: 0 0 0.75rem;
     letter-spacing: 0.01em;
 }
 
 .hero__outcome {
-    font-size: 1rem;
-    color: #c9bfac;
-    margin: 0 0 1.25rem;
-    max-width: 50ch;
-    line-height: 1.5;
+    font-size: 1.075rem;
+    color: #d4c8b3;
+    margin: 0 0 1.5rem;
+    max-width: 36ch;
+    line-height: 1.55;
 }
 
 .hero__skip {
     text-align: center;
-    margin: 0.85rem 0 0;
-    font-size: 0.875rem;
+    margin: 1rem 0 0;
+    font-size: 1rem;
 }
 
 .hero__skip a {
-    color: #8c8170;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    color: #b3a795;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: color 0.12s ease, border-color 0.12s ease;
@@ -131,7 +147,7 @@ p:last-child {
 
 .hero__skip a:hover,
 .hero__skip a:focus-visible {
-    color: #c9bfac;
+    color: #ede4d3;
     border-bottom-color: #6a5e51;
     outline: none;
 }
@@ -148,7 +164,7 @@ p:last-child {
     justify-content: center;
     gap: 0.85rem;
     color: #d4c8b3;
-    font-size: 0.98rem;
+    font-size: 1.05rem;
     letter-spacing: 0.01em;
     margin: 0;
     text-align: center;
@@ -177,52 +193,53 @@ p:last-child {
 }
 
 .video-placeholder__text {
-    color: #c9bfac;
-    max-width: 36ch;
+    color: #ede4d3;
+    max-width: 32ch;
     line-height: 1.4;
+    font-weight: 500;
 }
 
 /* Hero quotes (above the fold credibility) */
 .hero-quotes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 1.25rem;
+    gap: 1.25rem;
+    margin-top: 2rem;
 }
 
 .hero-quote {
     background: #25201c;
     border: 1px solid #322b25;
     border-radius: 12px;
-    padding: 1.5rem 1.5rem 1.5rem 2.75rem;
+    padding: 1.85rem 1.85rem 1.85rem 3rem;
     margin: 0;
-    color: #ede4d3;
+    color: #f0e8d3;
     font-style: italic;
-    font-size: 1.05rem;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.65;
     position: relative;
 }
 
 .hero-quote::before {
     content: "\201C";
     position: absolute;
-    top: 0.35rem;
-    left: 0.85rem;
+    top: 0.4rem;
+    left: 0.95rem;
     font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
-    font-size: 2.75rem;
+    font-size: 3rem;
     font-style: normal;
-    color: #5a4a3d;
+    color: #6b5848;
     line-height: 1;
 }
 
 @media (max-width: 600px) {
     .hero-quotes {
         grid-template-columns: 1fr;
-        gap: 0.75rem;
+        gap: 1rem;
     }
     .hero-quote {
-        padding: 1.25rem 1.25rem 1.25rem 2.5rem;
-        font-size: 1rem;
+        padding: 1.5rem 1.5rem 1.5rem 2.75rem;
+        font-size: 1.15rem;
     }
 }
 
@@ -230,18 +247,32 @@ p:last-child {
 .quote-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 .quote {
     background: #25201c;
     border: 1px solid #322b25;
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 1.85rem 1.85rem 1.85rem 3rem;
     margin: 0;
-    color: #e3dac6;
-    font-size: 1rem;
-    line-height: 1.55;
+    color: #f0e8d3;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    position: relative;
+}
+
+.quote::before {
+    content: "\201C";
+    position: absolute;
+    top: 0.4rem;
+    left: 0.95rem;
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    font-size: 3rem;
+    font-style: normal;
+    color: #6b5848;
+    line-height: 1;
 }
 
 @media (max-width: 900px) {
@@ -250,9 +281,14 @@ p:last-child {
     }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 600px) {
     .quote-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .quote {
+        padding: 1.5rem 1.5rem 1.5rem 2.75rem;
+        font-size: 1.15rem;
     }
 }
 
@@ -260,20 +296,21 @@ p:last-child {
 .reflections-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 .quote--medium {
     grid-column: span 1;
     background: #26211d;
+    font-size: 1.15rem;
 }
 
 .quote--long {
     grid-column: span 2;
     background: #28221d;
-    padding: 1.75rem 2rem;
-    font-size: 1.05rem;
-    line-height: 1.65;
+    padding: 2.25rem 2.25rem 2.25rem 3.25rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
 @media (max-width: 700px) {
@@ -285,7 +322,8 @@ p:last-child {
         grid-column: span 1;
     }
     .quote--long {
-        padding: 1.5rem;
+        padding: 1.75rem 1.5rem 1.75rem 2.75rem;
+        font-size: 1.075rem;
     }
 }
 
@@ -293,7 +331,7 @@ p:last-child {
 .approach-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.25rem;
     margin-top: 0.5rem;
 }
 
@@ -301,12 +339,19 @@ p:last-child {
     background: #25201c;
     border: 1px solid #322b25;
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 1.85rem;
+}
+
+.approach-card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.85rem;
 }
 
 .approach-card p {
     margin: 0;
-    color: #c9bfac;
+    color: #d4c8b3;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 @media (max-width: 700px) {
@@ -319,7 +364,7 @@ p:last-child {
 .scenarios-list {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.85rem;
     margin-top: 0.5rem;
 }
 
@@ -333,15 +378,16 @@ p:last-child {
 .scenario summary {
     list-style: none;
     cursor: pointer;
-    padding: 1.25rem 1.5rem;
+    padding: 1.35rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    color: #f0e8d3;
-    font-weight: 500;
-    font-size: 1.05rem;
-    min-height: 56px;
+    color: #f6efde;
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 1.35;
+    min-height: 60px;
     -webkit-tap-highlight-color: transparent;
     transition: background 0.12s ease;
 }
@@ -366,15 +412,14 @@ p:last-child {
 
 .scenario__title {
     flex: 1 1 auto;
-    line-height: 1.3;
 }
 
 .scenario__chevron {
     flex: 0 0 auto;
-    color: #a89c8a;
-    font-size: 1.5rem;
+    color: #c9bfac;
+    font-size: 1.65rem;
     line-height: 1;
-    width: 1.5rem;
+    width: 1.65rem;
     text-align: center;
     transition: transform 0.12s ease, color 0.12s ease;
 }
@@ -389,9 +434,10 @@ p:last-child {
 }
 
 .scenario__answer {
-    padding: 0.25rem 1.5rem 1.5rem;
-    color: #c9bfac;
+    padding: 0.5rem 1.5rem 1.5rem;
+    color: #ede4d3;
     line-height: 1.6;
+    font-size: 1rem;
     border-top: 1px solid #2c2520;
 }
 
@@ -401,40 +447,42 @@ p:last-child {
 
 @media (max-width: 600px) {
     .scenario summary {
-        padding: 1.1rem 1.25rem;
-        font-size: 1rem;
+        padding: 1.2rem 1.25rem;
+        font-size: 1.1rem;
     }
     .scenario__answer {
-        padding: 0.25rem 1.25rem 1.25rem;
+        padding: 0.5rem 1.25rem 1.25rem;
     }
 }
 
 /* Closing */
 .closing {
-    padding: 3rem 0 1rem;
+    padding: 3.5rem 0 1rem;
     border-top: 1px solid #2c2520;
 }
 
 .closing h2 {
-    margin-bottom: 0.5rem;
-    max-width: 28ch;
+    margin-bottom: 0.75rem;
+    max-width: 26ch;
 }
 
 .closing p {
-    color: #c9bfac;
+    color: #d4c8b3;
     margin-bottom: 1rem;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    line-height: 1.55;
 }
 
 .cta {
     display: inline-block;
-    padding: 0.85rem 1.6rem;
+    padding: 0.95rem 1.7rem;
     background: #ede4d3;
     color: #1c1815;
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    min-height: 48px;
     transition: background 0.15s ease, transform 0.15s ease;
 }
 
@@ -449,16 +497,16 @@ p:last-child {
 }
 
 .cta--large {
-    padding: 1.05rem 2rem;
-    font-size: 1.05rem;
-    min-height: 52px;
+    padding: 1.1rem 2rem;
+    font-size: 1.1rem;
+    min-height: 56px;
 }
 
 /* Contact (final, action-oriented) */
 .contact {
     text-align: center;
-    padding: 1.5rem 0 1rem;
-    margin-top: 1.5rem;
+    padding: 2rem 0 1rem;
+    margin-top: 2rem;
     border-top: 1px solid #2c2520;
     margin-bottom: 3rem;
 }
@@ -469,27 +517,28 @@ p:last-child {
 }
 
 .contact > p {
-    color: #c9bfac;
+    color: #d4c8b3;
     margin: 0 auto 0.85rem;
-    max-width: 50ch;
-    font-size: 1.02rem;
-    line-height: 1.55;
+    max-width: 38ch;
+    font-size: 1.075rem;
+    line-height: 1.6;
 }
 
 .contact__details {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.25rem;
-    margin: 2rem 0 1.75rem;
+    gap: 0.5rem;
+    margin: 2.25rem 0 2rem;
 }
 
 .contact__link {
-    color: #f0e8d3;
+    color: #f6efde;
     text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0.65rem 1rem;
-    min-height: 48px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    min-height: 52px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -510,7 +559,7 @@ p:last-child {
         margin-bottom: 2rem;
     }
     .contact__link {
-        font-size: 1.15rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -519,9 +568,10 @@ footer {
     max-width: 1080px;
     margin: 0 auto;
     padding: 2rem 1.5rem 3rem;
-    color: #7d7363;
-    font-size: 0.9rem;
+    color: #a89c8a;
+    font-size: 0.95rem;
     border-top: 1px solid #2c2520;
+    line-height: 1.5;
 }
 
 footer p {
