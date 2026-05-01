@@ -110,9 +110,17 @@ p:last-child {
     font-size: clamp(1.25rem, 4.2vw, 1.45rem);
     line-height: 1.35;
     color: #f6efde;
-    margin: 0 0 1rem;
+    margin: 0 0 0.85rem;
     max-width: 26ch;
     font-weight: 500;
+}
+
+.hero__role {
+    font-size: clamp(1.1rem, 3.6vw, 1.25rem);
+    line-height: 1.4;
+    color: #ede4d3;
+    margin: 0 0 1rem;
+    max-width: 32ch;
 }
 
 .hero__cue {
@@ -354,9 +362,23 @@ p:last-child {
     line-height: 1.6;
 }
 
+.approach__result {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #f6efde;
+    max-width: 44ch;
+    margin: 2.75rem auto 0;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
 @media (max-width: 700px) {
     .approach-grid {
         grid-template-columns: 1fr;
+    }
+    .approach__result {
+        font-size: 1.15rem;
+        margin-top: 2.25rem;
     }
 }
 
@@ -524,11 +546,20 @@ p:last-child {
     line-height: 1.6;
 }
 
-.contact__invite {
-    color: #f0e8d3;
-    font-size: 1.15rem;
+.contact__question {
+    color: #f6efde;
+    font-size: 1.2rem;
     line-height: 1.5;
-    margin: 2.5rem auto 0.75rem;
+    margin: 2.5rem auto 0.5rem;
+    max-width: 36ch;
+    font-weight: 500;
+}
+
+.contact__invite {
+    color: #d4c8b3;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0 auto 0.75rem;
     max-width: 32ch;
 }
 
