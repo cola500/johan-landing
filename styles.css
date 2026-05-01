@@ -426,12 +426,6 @@ p:last-child {
     font-size: 1.05rem;
 }
 
-.closing__cta-prompt {
-    margin-top: 1.5rem;
-    margin-bottom: 1.25rem;
-    color: #d4c8b3;
-}
-
 .cta {
     display: inline-block;
     padding: 0.85rem 1.6rem;
@@ -452,6 +446,72 @@ p:last-child {
 
 .cta:focus-visible {
     box-shadow: 0 0 0 3px rgba(237, 228, 211, 0.35);
+}
+
+.cta--large {
+    padding: 1.05rem 2rem;
+    font-size: 1.05rem;
+    min-height: 52px;
+}
+
+/* Contact (final, action-oriented) */
+.contact {
+    text-align: center;
+    padding: 1.5rem 0 1rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #2c2520;
+    margin-bottom: 3rem;
+}
+
+.contact h2 {
+    margin: 1.5rem auto 1rem;
+    max-width: 22ch;
+}
+
+.contact > p {
+    color: #c9bfac;
+    margin: 0 auto 0.85rem;
+    max-width: 50ch;
+    font-size: 1.02rem;
+    line-height: 1.55;
+}
+
+.contact__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 2rem 0 1.75rem;
+}
+
+.contact__link {
+    color: #f0e8d3;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.65rem 1rem;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid transparent;
+    transition: color 0.12s ease, border-color 0.12s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.contact__link:hover,
+.contact__link:focus-visible {
+    color: #fff;
+    border-bottom-color: #6a5e51;
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .contact {
+        margin-bottom: 2rem;
+    }
+    .contact__link {
+        font-size: 1.15rem;
+    }
 }
 
 /* Footer */
