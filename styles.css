@@ -419,3 +419,93 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* ------------------------------------------------------------------
+   Desktop layer — only applies above 900px, mobile stays untouched
+   ------------------------------------------------------------------ */
+@media (min-width: 900px) {
+    main {
+        padding: 5.5rem 2rem 2.5rem;
+    }
+
+    section {
+        margin-bottom: 10rem;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* Hero — text left, video right */
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 3.5rem;
+        align-items: center;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .hero > h1 {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: end;
+        margin: 0 0 1rem;
+    }
+
+    .hero__hook {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: start;
+        font-size: 1.55rem;
+        line-height: 1.4;
+        max-width: 30ch;
+        margin: 0;
+    }
+
+    .hero .video-placeholder {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        align-self: center;
+    }
+
+    /* Quotes — 3-col with the longer last quote spanning all */
+    .quote-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.75rem;
+    }
+
+    .quote-grid > .quote:last-child {
+        grid-column: span 3;
+    }
+
+    /* Approach — keep 2x2 with airier gap */
+    .approach-grid {
+        gap: 2rem;
+    }
+
+    /* Reflections — testimonials side by side */
+    .reflections-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .quote--long {
+        font-size: 1.075rem;
+    }
+
+    /* Scenarios — cap line length on the answer text for readability */
+    .scenario__answer p {
+        max-width: 64ch;
+    }
+
+    /* Footer breathes a bit more */
+    footer {
+        padding: 2.5rem 2rem 3.5rem;
+    }
+}
