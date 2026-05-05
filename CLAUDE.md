@@ -8,7 +8,7 @@ Statisk personlig landningssida för Johan Lindengard (projektledare). Sidan är
 
 ## Stack och utveckling
 
-Ren HTML + CSS — **ingen build, inga tester, inga dependencies, ingen `package.json`**. Bara tre filer i roten: `index.html`, `styles.css`, `README.md`.
+Ren HTML + CSS — **ingen build, inga tester, inga dependencies, ingen `package.json`**. Filerna i roten: `index.html`, `styles.css`, `CNAME`, `README.md`.
 
 Lokal förhandsgranskning: öppna `index.html` direkt i webbläsaren, eller starta en enkel server från projektroten:
 
@@ -20,6 +20,14 @@ python3 -m http.server 8000
 ## Deploy
 
 Push till `main` triggar `.github/workflows/deploy-pages.yml`, som publicerar hela repo-roten till GitHub Pages. Det finns inget separat dist/build-steg — det som ligger i roten är det som går live. Om en ny long-lived branch behövs i deploy-flödet måste den läggas till i workflowens `branches`-lista.
+
+Live på **https://whois.johanlindengard.com** (HTTP redirectas till HTTPS, certifikatet förnyas automatiskt av GitHub).
+
+### Custom domain
+
+`CNAME`-filen i roten innehåller `whois.johanlindengard.com` och **måste finnas där**. Workflowen laddar upp hela repo-roten som artifact (`build_type: workflow`); utan CNAME-filen i artifacten tappar GitHub Pages custom domain-inställningen vid varje deploy och Let's Encrypt slutar utfärda HTTPS-cert. Ändra inte filens innehåll utan att också uppdatera DNS hos domänleverantören och custom domain-fältet i Settings → Pages.
+
+DNS hos domänleverantören: `whois.johanlindengard.com` är en `CNAME` som pekar på `cola500.github.io`.
 
 ## Designkonventioner att respektera
 
